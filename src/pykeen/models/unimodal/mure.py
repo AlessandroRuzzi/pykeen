@@ -74,9 +74,6 @@ class MuRE(ERModel):
                     shape=embedding_dim,
                     initializer=entity_initializer,
                     initializer_kwargs=entity_initializer_kwargs
-                    or dict(
-                        std=1.0e-03,
-                    ),
                 ),
                 # entity bias for head
                 dict(
