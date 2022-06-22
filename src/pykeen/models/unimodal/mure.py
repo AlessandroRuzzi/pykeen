@@ -92,19 +92,12 @@ class MuRE(ERModel):
                     shape=embedding_dim,
                     initializer=relation_initializer,
                     initializer_kwargs=relation_initializer_kwargs
-                    or dict(
-                        std=1.0e-03,
-                    ),
                 ),
                 # diagonal relation transformation matrix
                 dict(
                     shape=embedding_dim,
                     initializer=relation_matrix_initializer,
                     initializer_kwargs=relation_matrix_initializer_kwargs
-                    or dict(
-                        a=-1,
-                        b=1,
-                    ),
                 ),
             ],
             **kwargs,
