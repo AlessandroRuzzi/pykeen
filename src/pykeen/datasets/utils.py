@@ -205,7 +205,7 @@ def _cached_get_dataset(
     dataset_cls = dataset_resolver.lookup(dataset)
     dataset = dataset_resolver.normalize_cls(dataset_cls)
 
-    # get canonic path
+    ''' # get canonic path 
     path = PYKEEN_DATASETS.joinpath(dataset, "cache", digest)
 
     # try to use cached dataset
@@ -214,7 +214,7 @@ def _cached_get_dataset(
         return _set_inverse_triples_(
             dataset_cls.from_directory_binary(path),
             create_inverse_triples=dataset_kwargs.get("create_inverse_triples", False),
-        )
+        )'''
 
     # load dataset without cache
     dataset_instance = dataset_resolver.make(dataset, dataset_kwargs)
