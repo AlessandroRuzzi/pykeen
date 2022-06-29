@@ -220,7 +220,7 @@ def _cached_get_dataset(
     dataset_instance = dataset_resolver.make(dataset, dataset_kwargs)
 
     # store cache
-    logger.info(f"Caching preprocessed dataset to {path.as_uri()}")
-    dataset_instance.to_directory_binary(path=path)
+    #logger.info(f"Caching preprocessed dataset to {path.as_uri()}")
+    #dataset_instance.to_directory_binary(path=path)
 
     return dataset_instance
